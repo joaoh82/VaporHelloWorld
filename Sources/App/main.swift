@@ -21,4 +21,8 @@ drop.get("/name",":name") { request in
     return "Error retrieving parameters."
 }
 
+drop.get("/view") { request in
+    return try drop.view.make("view.html")
+}
+
 drop.run()
